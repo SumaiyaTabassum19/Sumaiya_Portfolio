@@ -1,0 +1,321 @@
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background: var(--navbar-bg);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom:
+        1px solid var(--border-color);
+
+    transition: var(--transition);
+}
+
+
+.navbar-container {
+
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.navbar-logo {
+
+    color: var(--text-primary);
+
+    font-size: 1.5rem;
+
+    font-weight: 800;
+
+    transition: var(--transition);
+}
+
+
+.navbar-logo span {
+
+    color: var(--accent-primary);
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.navbar-links a {
+
+    position: relative;
+
+    color: var(--text-secondary);
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    padding: 8px 0;
+
+    transition: var(--transition);
+}
+
+
+.navbar-links a:hover {
+
+    color: var(--accent-primary);
+}
+
+
+.navbar-links a.active {
+
+    color: var(--accent-primary);
+}
+
+
+.navbar-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--accent-primary);
+
+    transition: width 0.3s ease;
+}
+
+
+.navbar-links a:hover::after,
+.navbar-links a.active::after {
+
+    width: 100%;
+}
+
+
+/* =========================
+   THEME BUTTON
+========================= */
+
+.theme-toggle {
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 50%;
+
+    background: var(--bg-card);
+
+    color: var(--text-primary);
+
+    font-size: 1.1rem;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+
+.theme-toggle:hover {
+
+    color: var(--accent-primary);
+
+    border-color: var(--accent-primary);
+
+    transform: rotate(15deg);
+}
+
+
+/* =========================
+   MOBILE BUTTON
+========================= */
+
+.mobile-menu-button {
+
+    display: none;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--text-primary);
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.mobile-menu {
+
+    display: none;
+}
+
+
+/* =========================
+   MOBILE THEME
+========================= */
+
+.mobile-theme-button {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 15px 25px;
+
+    border: none;
+
+    border-top:
+        1px solid var(--border-color);
+
+    background: transparent;
+
+    color: var(--text-primary);
+
+    cursor: pointer;
+
+    font-size: 0.95rem;
+}
+
+
+.mobile-theme-button:hover {
+
+    color: var(--accent-primary);
+
+    background:
+        rgba(156, 176, 128, 0.08);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+
+    .navbar-links {
+
+        display: none;
+    }
+
+
+    .theme-toggle {
+
+        margin-left: auto;
+
+        margin-right: 10px;
+    }
+
+
+    .mobile-menu-button {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+    }
+
+
+    .mobile-menu {
+
+        display: flex;
+
+        flex-direction: column;
+
+        max-height: 0;
+
+        overflow: hidden;
+
+        background: var(--bg-primary);
+
+        border-top:
+            1px solid transparent;
+
+        transition:
+            max-height 0.3s ease,
+            border-color 0.3s ease;
+    }
+
+
+    .mobile-menu-open {
+
+        max-height: 450px;
+
+        border-color:
+            var(--border-color);
+    }
+
+
+    .mobile-menu a {
+
+        padding: 15px 25px;
+
+        color: var(--text-secondary);
+
+        border-bottom:
+            1px solid var(--border-color);
+
+        transition: var(--transition);
+    }
+
+
+    .mobile-menu a:hover {
+
+        color: var(--accent-primary);
+
+        background:
+            rgba(156, 176, 128, 0.08);
+    }
+
+
+    .mobile-menu a.active {
+
+        color: var(--accent-primary);
+    }
+}

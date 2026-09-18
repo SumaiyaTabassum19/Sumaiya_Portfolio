@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+
+:root {
+
+    --accent-primary: #618764;
+    --accent-secondary: #9CB080;
+
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f7f2;
+    --bg-card: #ffffff;
+
+    --text-primary: #273338;
+    --text-secondary: #5f6b66;
+
+    --border-color: #dce4d7;
+
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+
+    --shadow-sm:
+        0 4px 15px rgba(43, 87, 72, 0.08);
+
+    --shadow-lg:
+        0 15px 40px rgba(43, 87, 72, 0.15);
+
+    --transition:
+        all 0.3s ease;
+}
+
+
+/* =========================
+   DARK THEME
+========================= */
+
+[data-theme="dark"] {
+
+    --accent-primary: #9CB080;
+    --accent-secondary: #618764;
+
+    --bg-primary: #273338;
+    --bg-secondary: #2B5748;
+    --bg-card: #30433f;
+
+    --text-primary: #f5f7f2;
+    --text-secondary: #c4cec7;
+
+    --border-color: rgba(156, 176, 128, 0.25);
+
+    --navbar-bg: rgba(39, 51, 56, 0.96);
+
+    --shadow-sm:
+        0 4px 15px rgba(0, 0, 0, 0.2);
+
+    --shadow-lg:
+        0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "Inter", sans-serif;
+
+    background: var(--bg-primary);
+
+    color: var(--text-primary);
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+
+    min-width: 320px;
+}
+
+
+a {
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+img {
+    max-width: 100%;
+
+    display: block;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+
+    width: min(1150px, 92%);
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+
+    min-height: 100vh;
+
+    padding:
+
+        120px
+        0
+        80px;
+
+    background: var(--bg-primary);
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+
+.section-label {
+
+    display: inline-block;
+
+    color: var(--accent-primary);
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+.section-title h2 {
+
+    font-size:
+        clamp(2rem, 5vw, 3.5rem);
+
+    margin-bottom: 15px;
+}
+
+
+.section-title p {
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: var(--text-secondary);
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   GRADIENT TEXT
+========================= */
+
+.gradient-text {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--accent-primary),
+            var(--accent-secondary)
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+}
+
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-primary);
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   SELECTION
+========================= */
+
+::selection {
+
+    background: var(--accent-primary);
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .section {
+
+        padding-top: 100px;
+    }
+}
