@@ -23,11 +23,6 @@ function About() {
             text: "Working with Node.js, PHP, MySQL and REST APIs."
         },
         {
-            icon: <FiBookOpen />,
-            title: "Research",
-            text: "Exploring machine learning and speech-related research."
-        },
-        {
             icon: <FiLayers />,
             title: "Continuous Learning",
             text: "Always improving technical and problem-solving skills."
@@ -85,8 +80,7 @@ function About() {
                         <p className="about-intro">
                             I am a Computer Science graduate with
                             an interest in software development,
-                            web technologies, machine learning,
-                            and research.
+                            web technologies.
                         </p>
 
                         <p>
@@ -100,26 +94,6 @@ function About() {
                             continuous learning, and adapting
                             to new technologies.
                         </p>
-
-
-                        <div className="about-stats">
-
-                            <div className="stat-item">
-                                <strong>5+</strong>
-                                <span>Years Teaching</span>
-                            </div>
-
-                            <div className="stat-item">
-                                <strong>CSE</strong>
-                                <span>Graduate</span>
-                            </div>
-
-                            <div className="stat-item">
-                                <strong>ML</strong>
-                                <span>Research</span>
-                            </div>
-
-                        </div>
 
                     </motion.div>
 

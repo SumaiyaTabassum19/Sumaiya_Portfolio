@@ -28,15 +28,15 @@ function Experience() {
             description:
                 "Worked on creative digital materials, visual communication, and design-related tasks."
         },
-        {
-            year: "5+ Years",
-            icon: <FiBookOpen />,
-            title: "Private Tutor",
-            organization:
-                "Academic Teaching",
-            description:
-                "Provided private tutoring for secondary and higher-secondary students."
-        }
+        // {
+        //     year: "5+ Years",
+        //     icon: <FiBookOpen />,
+        //     title: "Private Tutor",
+        //     organization:
+        //         "Academic Teaching",
+        //     description:
+        //         "Provided private tutoring for secondary and higher-secondary students."
+        // }
     ];
 
     return (

@@ -131,7 +131,7 @@ function ContactPage() {
 
                         <p>
                             I'm always interested in discussing
-                            new opportunities, projects, research,
+                            new opportunities, projects,
                             and technology.
                         </p>
 
@@ -147,8 +147,8 @@ function ContactPage() {
 
                                 <div>
                                     <span>Email</span>
-                                    <a href="mailto:your-email@example.com">
-                                        your-email@example.com
+                                    <a href="mailto:tabassumsts556@gmail.com">
+                                        tabassumsts556@gmail.com
                                     </a>
                                 </div>
 
@@ -164,7 +164,7 @@ function ContactPage() {
                                 <div>
                                     <span>Phone</span>
                                     <p>
-                                        +880 1XXXXXXXXX
+                                        +880 16144 15541
                                     </p>
                                 </div>
 

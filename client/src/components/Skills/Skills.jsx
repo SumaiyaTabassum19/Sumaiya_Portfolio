@@ -39,22 +39,19 @@ function Skills() {
             title: "Database",
             skills: [
                 "MySQL",
-                "SQL",
-                "CRUD",
-                "Database Design"
             ]
         },
-        {
-            icon: <FiCpu />,
-            title: "Machine Learning",
-            skills: [
-                "Python",
-                "Wav2Vec 2.0",
-                "Random Forest",
-                "Logistic Regression",
-                "MFCC"
-            ]
-        },
+        // {
+        //     icon: <FiCpu />,
+        //     title: "Machine Learning",
+        //     skills: [
+        //         "Python",
+        //         "Wav2Vec 2.0",
+        //         "Random Forest",
+        //         "Logistic Regression",
+        //         "MFCC"
+        //     ]
+        // },
         {
             icon: <FiTool />,
             title: "Tools",
