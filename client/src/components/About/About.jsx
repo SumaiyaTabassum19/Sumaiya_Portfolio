@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import {
     FiCode,
     FiDatabase,
-    FiBookOpen,
     FiLayers
 } from "react-icons/fi";
 
 import "./About.css";
+
 
 function About() {
 
@@ -15,19 +15,23 @@ function About() {
         {
             icon: <FiCode />,
             title: "Web Development",
-            text: "Building responsive and user-friendly web applications."
+            text:
+                "Building responsive and user-friendly web applications."
         },
         {
             icon: <FiDatabase />,
             title: "Backend & Database",
-            text: "Working with Node.js, PHP, MySQL and REST APIs."
+            text:
+                "Working with Node.js, PHP, MySQL and REST APIs."
         },
         {
             icon: <FiLayers />,
             title: "Continuous Learning",
-            text: "Always improving technical and problem-solving skills."
+            text:
+                "Always improving technical and problem-solving skills."
         }
     ];
+
 
     return (
         <section
@@ -61,17 +65,21 @@ function About() {
 
                     <motion.div
                         className="about-content"
+
                         initial={{
                             opacity: 0,
                             x: -30
                         }}
+
                         whileInView={{
                             opacity: 1,
                             x: 0
                         }}
+
                         viewport={{
                             once: true
                         }}
+
                         transition={{
                             duration: 0.6
                         }}
@@ -100,45 +108,54 @@ function About() {
 
                     <div className="about-highlights">
 
-                        {highlights.map((item, index) => (
+                        {highlights.map(
+                            (item, index) => (
 
-                            <motion.div
-                                className="highlight-card"
-                                key={item.title}
-                                initial={{
-                                    opacity: 0,
-                                    y: 20
-                                }}
-                                whileInView={{
-                                    opacity: 1,
-                                    y: 0
-                                }}
-                                viewport={{
-                                    once: true
-                                }}
-                                transition={{
-                                    duration: 0.4,
-                                    delay: index * 0.08
-                                }}
-                            >
+                                <motion.div
+                                    className="highlight-card"
+                                    key={item.title}
 
-                                <div className="highlight-icon">
-                                    {item.icon}
-                                </div>
+                                    initial={{
+                                        opacity: 0,
+                                        y: 20
+                                    }}
 
-                                <div>
-                                    <h3>
-                                        {item.title}
-                                    </h3>
+                                    whileInView={{
+                                        opacity: 1,
+                                        y: 0
+                                    }}
 
-                                    <p>
-                                        {item.text}
-                                    </p>
-                                </div>
+                                    viewport={{
+                                        once: true
+                                    }}
 
-                            </motion.div>
+                                    transition={{
+                                        duration: 0.4,
+                                        delay:
+                                            index * 0.08
+                                    }}
+                                >
 
-                        ))}
+                                    <div className="highlight-icon">
+                                        {item.icon}
+                                    </div>
+
+                                    <div>
+
+                                        <h3>
+                                            {item.title}
+                                        </h3>
+
+                                        <p>
+                                            {item.text}
+                                        </p>
+
+                                    </div>
+
+                                </motion.div>
+
+                            )
+                        )}
 
                     </div>
 
@@ -149,5 +166,6 @@ function About() {
         </section>
     );
 }
+
 
 export default About;

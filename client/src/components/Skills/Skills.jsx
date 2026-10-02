@@ -4,11 +4,11 @@ import {
     FiMonitor,
     FiServer,
     FiDatabase,
-    FiTool,
-    FiCpu
+    FiTool
 } from "react-icons/fi";
 
 import "./Skills.css";
+
 
 function Skills() {
 
@@ -38,20 +38,9 @@ function Skills() {
             icon: <FiDatabase />,
             title: "Database",
             skills: [
-                "MySQL",
+                "MySQL"
             ]
         },
-        // {
-        //     icon: <FiCpu />,
-        //     title: "Machine Learning",
-        //     skills: [
-        //         "Python",
-        //         "Wav2Vec 2.0",
-        //         "Random Forest",
-        //         "Logistic Regression",
-        //         "MFCC"
-        //     ]
-        // },
         {
             icon: <FiTool />,
             title: "Tools",
@@ -63,6 +52,7 @@ function Skills() {
             ]
         }
     ];
+
 
     return (
         <section
@@ -86,7 +76,7 @@ function Skills() {
                     </h2>
 
                     <p>
-                        Development, database, research and
+                        Development, database, and
                         technical skills.
                     </p>
 
@@ -95,59 +85,68 @@ function Skills() {
 
                 <div className="skills-grid">
 
-                    {skillGroups.map((group, index) => (
+                    {skillGroups.map(
+                        (group, index) => (
 
-                        <motion.div
-                            className="skill-card"
-                            key={group.title}
-                            initial={{
-                                opacity: 0,
-                                y: 20
-                            }}
-                            whileInView={{
-                                opacity: 1,
-                                y: 0
-                            }}
-                            viewport={{
-                                once: true
-                            }}
-                            transition={{
-                                duration: 0.4,
-                                delay: index * 0.08
-                            }}
-                        >
+                            <motion.div
+                                className="skill-card"
+                                key={group.title}
 
-                            <div className="skill-card-header">
+                                initial={{
+                                    opacity: 0,
+                                    y: 20
+                                }}
 
-                                <div className="skill-icon">
-                                    {group.icon}
+                                whileInView={{
+                                    opacity: 1,
+                                    y: 0
+                                }}
+
+                                viewport={{
+                                    once: true
+                                }}
+
+                                transition={{
+                                    duration: 0.4,
+                                    delay:
+                                        index * 0.08
+                                }}
+                            >
+
+                                <div className="skill-card-header">
+
+                                    <div className="skill-icon">
+                                        {group.icon}
+                                    </div>
+
+                                    <h3>
+                                        {group.title}
+                                    </h3>
+
                                 </div>
 
-                                <h3>
-                                    {group.title}
-                                </h3>
 
-                            </div>
+                                <div className="skill-tags">
 
+                                    {group.skills.map(
+                                        (skill) => (
 
-                            <div className="skill-tags">
+                                            <span
+                                                className="skill-tag"
+                                                key={skill}
+                                            >
+                                                {skill}
+                                            </span>
 
-                                {group.skills.map((skill) => (
+                                        )
+                                    )}
 
-                                    <span
-                                        className="skill-tag"
-                                        key={skill}
-                                    >
-                                        {skill}
-                                    </span>
+                                </div>
 
-                                ))}
+                            </motion.div>
 
-                            </div>
-
-                        </motion.div>
-
-                    ))}
+                        )
+                    )}
 
                 </div>
 
@@ -156,5 +155,6 @@ function Skills() {
         </section>
     );
 }
+
 
 export default Skills;

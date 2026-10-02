@@ -2,6 +2,7 @@
     background: var(--bg-secondary);
 }
 
+
 .timeline {
     position: relative;
 
@@ -9,6 +10,7 @@
 
     margin: 0 auto;
 }
+
 
 .timeline::before {
     content: "";
@@ -22,8 +24,13 @@
 
     width: 2px;
 
-    background: var(--border-color);
+    background:
+        linear-gradient(
+            var(--accent-primary),
+            var(--accent-gold)
+        );
 }
+
 
 .timeline-item {
     position: relative;
@@ -34,6 +41,7 @@
 
     margin-bottom: 30px;
 }
+
 
 .timeline-dot {
     position: relative;
@@ -50,12 +58,19 @@
 
     border-radius: 50%;
 
-    background: var(--color-deep-green);
+    background:
+        linear-gradient(
+            135deg,
+            var(--accent-primary),
+            var(--accent-orange)
+        );
 
-    color: var(--color-sage);
+    color: #ffffff;
 
-    border: 5px solid var(--bg-secondary);
+    border:
+        5px solid var(--bg-secondary);
 }
+
 
 .timeline-content {
     flex: 1;
@@ -71,6 +86,7 @@
     transition: var(--transition);
 }
 
+
 .timeline-content:hover {
     transform: translateX(5px);
 
@@ -78,6 +94,7 @@
 
     box-shadow: var(--shadow-sm);
 }
+
 
 .timeline-year {
     color: var(--accent-secondary);
@@ -89,6 +106,7 @@
     letter-spacing: 1px;
 }
 
+
 .timeline-content h3 {
     margin: 7px 0 3px;
 
@@ -96,6 +114,7 @@
 
     font-size: 1.1rem;
 }
+
 
 .timeline-content h4 {
     margin-bottom: 10px;
@@ -106,6 +125,7 @@
 
     font-weight: 500;
 }
+
 
 .timeline-content p {
     color: var(--text-secondary);
@@ -122,13 +142,15 @@
         left: 20px;
     }
 
+
     .timeline-item {
         gap: 15px;
     }
 
+
     .timeline-dot {
         min-width: 42px;
-
         height: 42px;
     }
+
 }

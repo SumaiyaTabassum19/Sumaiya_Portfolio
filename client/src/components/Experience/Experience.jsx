@@ -7,6 +7,7 @@ import {
 
 import "./Experience.css";
 
+
 function Experience() {
 
     const experiences = [
@@ -22,22 +23,14 @@ function Experience() {
         {
             year: "Professional",
             icon: <FiBriefcase />,
-            title: "Graphic Design / Creative Work",
+            title: "Graphic Design",
             organization:
                 "Professional Experience",
             description:
                 "Worked on creative digital materials, visual communication, and design-related tasks."
-        },
-        // {
-        //     year: "5+ Years",
-        //     icon: <FiBookOpen />,
-        //     title: "Private Tutor",
-        //     organization:
-        //         "Academic Teaching",
-        //     description:
-        //         "Provided private tutoring for secondary and higher-secondary students."
-        // }
+        }
     ];
+
 
     return (
         <section
@@ -70,55 +63,63 @@ function Experience() {
 
                 <div className="timeline">
 
-                    {experiences.map((item, index) => (
+                    {experiences.map(
+                        (item, index) => (
 
-                        <motion.div
-                            className="timeline-item"
-                            key={item.title}
-                            initial={{
-                                opacity: 0,
-                                x: -25
-                            }}
-                            whileInView={{
-                                opacity: 1,
-                                x: 0
-                            }}
-                            viewport={{
-                                once: true
-                            }}
-                            transition={{
-                                duration: 0.5,
-                                delay: index * 0.1
-                            }}
-                        >
+                            <motion.div
+                                className="timeline-item"
+                                key={item.title}
 
-                            <div className="timeline-dot">
-                                {item.icon}
-                            </div>
+                                initial={{
+                                    opacity: 0,
+                                    x: -25
+                                }}
 
-                            <div className="timeline-content">
+                                whileInView={{
+                                    opacity: 1,
+                                    x: 0
+                                }}
 
-                                <span className="timeline-year">
-                                    {item.year}
-                                </span>
+                                viewport={{
+                                    once: true
+                                }}
 
-                                <h3>
-                                    {item.title}
-                                </h3>
+                                transition={{
+                                    duration: 0.5,
+                                    delay:
+                                        index * 0.1
+                                }}
+                            >
 
-                                <h4>
-                                    {item.organization}
-                                </h4>
+                                <div className="timeline-dot">
+                                    {item.icon}
+                                </div>
 
-                                <p>
-                                    {item.description}
-                                </p>
 
-                            </div>
+                                <div className="timeline-content">
 
-                        </motion.div>
+                                    <span className="timeline-year">
+                                        {item.year}
+                                    </span>
 
-                    ))}
+                                    <h3>
+                                        {item.title}
+                                    </h3>
+
+                                    <h4>
+                                        {item.organization}
+                                    </h4>
+
+                                    <p>
+                                        {item.description}
+                                    </p>
+
+                                </div>
+
+                            </motion.div>
+
+                        )
+                    )}
 
                 </div>
 

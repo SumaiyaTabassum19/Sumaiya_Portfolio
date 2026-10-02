@@ -14,11 +14,15 @@ import SkillsPage from "./pages/SkillsPage";
 import ExperiencePage from "./pages/ExperiencePage";
 import EducationPage from "./pages/EducationPage";
 import ContactPage from "./pages/ContactPage";
+import ProjectsPage from "./pages/ProjectsPage";
 
 function App() {
 
     const [theme, setTheme] = useState(() => {
-        return localStorage.getItem("theme") || "light";
+        return (
+            localStorage.getItem("theme") ||
+            "light"
+        );
     });
 
 
@@ -39,11 +43,10 @@ function App() {
 
     const toggleTheme = () => {
 
-        setTheme(
-            currentTheme =>
-                currentTheme === "light"
-                    ? "dark"
-                    : "light"
+        setTheme((currentTheme) =>
+            currentTheme === "light"
+                ? "dark"
+                : "light"
         );
 
     };
@@ -89,7 +92,10 @@ function App() {
                     element={<ContactPage />}
                 />
 
-                
+                <Route
+                    path="/projects"
+                    element={<ProjectsPage />}
+                />
 
             </Routes>
 

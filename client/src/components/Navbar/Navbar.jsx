@@ -1,6 +1,3 @@
-// import { FiMenu, FiX } from "react-icons/fi";
-// import ThemeToggle from "../ThemeToggle/ThemeToggle";
-
 import { useState } from "react";
 
 import {
@@ -54,12 +51,14 @@ function Navbar({ theme, toggleTheme }) {
 
 
     const handleClick = () => {
+
         setMenuOpen(false);
 
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         });
+
     };
 
 
@@ -67,8 +66,6 @@ function Navbar({ theme, toggleTheme }) {
         <header className="navbar">
 
             <div className="container navbar-container">
-
-                {/* Logo */}
 
                 <Link
                     to="/"
@@ -78,8 +75,6 @@ function Navbar({ theme, toggleTheme }) {
                     STS<span>.</span>
                 </Link>
 
-
-                {/* Desktop Navigation */}
 
                 <nav className="navbar-links">
 
@@ -103,48 +98,40 @@ function Navbar({ theme, toggleTheme }) {
                 </nav>
 
 
-                {/* Theme Toggle */}
-
                 <button
                     className="theme-toggle"
                     onClick={toggleTheme}
                     aria-label="Toggle theme"
                     title="Toggle theme"
                 >
-
-                    {theme === "light" ? (
-                        <FiMoon />
-                    ) : (
-                        <FiSun />
-                    )}
-
+                    {theme === "light"
+                        ? <FiMoon />
+                        : <FiSun />
+                    }
                 </button>
 
 
-                {/* Mobile Menu Button */}
-
                 <button
                     className="mobile-menu-button"
-                    onClick={() => setMenuOpen(!menuOpen)}
+                    onClick={() =>
+                        setMenuOpen(!menuOpen)
+                    }
                     aria-label="Toggle navigation menu"
                 >
-
-                    {menuOpen ? (
-                        <FiX />
-                    ) : (
-                        <FiMenu />
-                    )}
-
+                    {menuOpen
+                        ? <FiX />
+                        : <FiMenu />
+                    }
                 </button>
 
             </div>
 
 
-            {/* Mobile Menu */}
-
             <div
                 className={`mobile-menu ${
-                    menuOpen ? "mobile-menu-open" : ""
+                    menuOpen
+                        ? "mobile-menu-open"
+                        : ""
                 }`}
             >
 
@@ -170,7 +157,6 @@ function Navbar({ theme, toggleTheme }) {
                     className="mobile-theme-button"
                     onClick={toggleTheme}
                 >
-
                     {theme === "light" ? (
                         <>
                             <FiMoon />
@@ -182,7 +168,6 @@ function Navbar({ theme, toggleTheme }) {
                             Light Mode
                         </>
                     )}
-
                 </button>
 
             </div>

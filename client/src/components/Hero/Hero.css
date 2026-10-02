@@ -2,110 +2,97 @@
     min-height: 100vh;
 
     display: flex;
+
     align-items: center;
 
     position: relative;
+
     overflow: hidden;
 
     padding: 90px 0 50px;
 }
 
 
-/* ============================= */
-/* HERO CONTAINER */
-/* ============================= */
-
 .hero-container {
     width: 100%;
 
     display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
+
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(280px, 0.6fr);
 
     align-items: center;
 
     gap: 45px;
 
     position: relative;
+
     z-index: 2;
 }
 
 
-/* ============================= */
-/* HERO CONTENT */
-/* ============================= */
+/* CONTENT */
 
 .hero-content {
     max-width: 850px;
 }
 
+
 .hero-greeting {
+    margin-bottom: 8px;
+
     color: var(--accent-primary);
 
     font-size: 0.95rem;
-    font-weight: 600;
 
-    margin-bottom: 8px;
+    font-weight: 600;
 }
 
 
-/* ============================= */
-/* NAME */
-/* ============================= */
-
 .hero h1 {
-    font-size: clamp(2.0rem, 4.5vw, 4.2rem);
+    margin-bottom: 12px;
+
+    font-size:
+        clamp(2rem, 4.5vw, 4.2rem);
 
     line-height: 1.1;
 
     letter-spacing: -2.5px;
-
-    margin-bottom: 12px;
-
-    white-space: nowrap;
 }
 
-.hero h1 span {
-    display: inline;
-}
-
-
-/* ============================= */
-/* DESIGNATION */
-/* ============================= */
 
 .hero h2 {
-    font-size: clamp(1.15rem, 2vw, 1.65rem);
-
-    line-height: 1.4;
+    margin-bottom: 18px;
 
     color: var(--text-secondary);
 
-    margin-bottom: 18px;
+    font-size:
+        clamp(1.15rem, 2vw, 1.65rem);
 
-    white-space: nowrap;
+    line-height: 1.4;
 }
 
 
-/* ============================= */
-/* DESCRIPTION */
-/* ============================= */
+.hero h2 span {
+    color: var(--accent-orange);
+}
+
 
 .hero-description {
     max-width: 650px;
+
+    margin-bottom: 25px;
 
     color: var(--text-secondary);
 
     line-height: 1.7;
 
     font-size: 1rem;
-
-    margin-bottom: 25px;
 }
 
 
-/* ============================= */
 /* BUTTONS */
-/* ============================= */
 
 .hero-buttons {
     display: flex;
@@ -116,6 +103,7 @@
 
     flex-wrap: wrap;
 }
+
 
 .primary-button,
 .secondary-button {
@@ -137,17 +125,25 @@
     transition: var(--transition);
 }
 
-.primary-button {
-    background: var(--accent-primary);
 
-    color: white;
+.primary-button {
+    background:
+        linear-gradient(
+            135deg,
+            var(--accent-primary),
+            var(--accent-secondary)
+        );
+
+    color: #ffffff;
 }
+
 
 .primary-button:hover {
     transform: translateY(-3px);
 
     box-shadow: var(--shadow-lg);
 }
+
 
 .secondary-button {
     border: 1px solid var(--border-color);
@@ -156,6 +152,7 @@
 
     color: var(--text-primary);
 }
+
 
 .secondary-button:hover {
     border-color: var(--accent-primary);
@@ -166,9 +163,7 @@
 }
 
 
-/* ============================= */
-/* SOCIAL ICONS */
-/* ============================= */
+/* SOCIAL */
 
 .hero-socials {
     display: flex;
@@ -177,6 +172,7 @@
 
     margin-top: 22px;
 }
+
 
 .hero-socials a {
     width: 38px;
@@ -196,6 +192,7 @@
     transition: var(--transition);
 }
 
+
 .hero-socials a:hover {
     color: var(--accent-primary);
 
@@ -205,9 +202,7 @@
 }
 
 
-/* ============================= */
-/* PROFILE IMAGE AREA */
-/* ============================= */
+/* PROFILE */
 
 .hero-image {
     display: flex;
@@ -219,13 +214,7 @@
 }
 
 
-/* ============================= */
-/* PROFILE WRAPPER */
-/* ============================= */
-
 .profile-wrapper {
-    position: relative;
-
     width: 350px;
     height: 430px;
 
@@ -233,48 +222,50 @@
 
     align-items: center;
     justify-content: center;
+
+    position: relative;
 }
 
 
-/* ============================= */
-/* PROFILE CARD */
-/* ============================= */
-
 .profile-card {
-    position: relative;
-
     width: 310px;
     height: 390px;
 
     padding: 8px;
 
-    background: var(--color-deep-green);
+    position: relative;
+
+    z-index: 3;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--accent-primary),
+            var(--accent-orange)
+        );
 
     border-radius: 28px;
 
     box-shadow:
-        0 25px 60px rgba(39, 51, 56, 0.22);
+        0 25px 60px rgba(151, 40, 40, 0.22);
 
     transform: rotate(2deg);
-
-    z-index: 3;
 
     transition:
         transform 0.4s ease,
         box-shadow 0.4s ease;
 }
 
+
 .profile-card:hover {
-    transform: rotate(0deg) translateY(-6px);
+    transform:
+        rotate(0deg)
+        translateY(-6px);
 
     box-shadow:
-        0 30px 70px rgba(39, 51, 56, 0.28);
+        0 30px 70px rgba(151, 40, 40, 0.28);
 }
 
-
-/* ============================= */
-/* INNER BORDER */
-/* ============================= */
 
 .profile-border {
     width: 100%;
@@ -282,21 +273,15 @@
 
     padding: 5px;
 
+    overflow: hidden;
+
     border-radius: 22px;
 
-    background: var(--color-sage);
-
-    overflow: hidden;
+    background: var(--accent-gold);
 }
 
 
-/* ============================= */
-/* PROFILE IMAGE */
-/* ============================= */
-
 .profile-photo {
-    display: block;
-
     width: 100%;
     height: 100%;
 
@@ -304,13 +289,11 @@
 
     border-radius: 17px;
 
-    background: var(--color-charcoal);
+    background: var(--bg-card);
 }
 
 
-/* ============================= */
-/* DECORATIVE SHAPES */
-/* ============================= */
+/* DECORATION */
 
 .profile-decoration {
     position: absolute;
@@ -321,8 +304,6 @@
 }
 
 
-/* Large sage circle */
-
 .decoration-one {
     width: 130px;
     height: 130px;
@@ -330,13 +311,11 @@
     top: 10px;
     right: 0;
 
-    background: var(--color-sage);
+    background: var(--accent-gold);
 
     opacity: 0.7;
 }
 
-
-/* Small green circle */
 
 .decoration-two {
     width: 80px;
@@ -345,15 +324,13 @@
     bottom: 15px;
     left: 5px;
 
-    background: var(--color-green);
+    background: var(--accent-secondary);
 
     opacity: 0.8;
 }
 
 
-/* ============================= */
-/* BACKGROUND EFFECTS */
-/* ============================= */
+/* BACKGROUND */
 
 .hero-background {
     position: absolute;
@@ -362,6 +339,7 @@
 
     pointer-events: none;
 }
+
 
 .gradient-circle {
     position: absolute;
@@ -376,61 +354,52 @@
     opacity: 0.12;
 }
 
+
 .circle-one {
     top: 8%;
     right: 10%;
 
-    background: var(--color-sage);
-
-    opacity: 0.12;
+    background: var(--accent-gold);
 }
+
 
 .circle-two {
     bottom: 5%;
     left: 5%;
 
-    background: var(--color-green);
-
-    opacity: 0.10;
+    background: var(--accent-secondary);
 }
 
 
-/* ============================= */
 /* TABLET */
-/* ============================= */
 
 @media (max-width: 1100px) {
 
     .hero-container {
-        grid-template-columns: minmax(0, 1.3fr) minmax(250px, 0.7fr);
+        grid-template-columns:
+            minmax(0, 1.3fr)
+            minmax(250px, 0.7fr);
 
         gap: 30px;
     }
 
-    .hero h1 {
-        font-size: clamp(2.3rem, 4.5vw, 4rem);
-    }
-
-    .hero h2 {
-        font-size: 1.2rem;
-    }
 
     .profile-card {
         width: 280px;
         height: 350px;
     }
+
 }
 
 
-/* ============================= */
 /* MOBILE */
-/* ============================= */
 
 @media (max-width: 850px) {
 
     .hero {
         padding: 110px 0 60px;
     }
+
 
     .hero-container {
         grid-template-columns: 1fr;
@@ -440,54 +409,56 @@
         text-align: center;
     }
 
+
     .hero-image {
         order: -1;
     }
+
+
+    .hero-buttons,
+    .hero-socials {
+        justify-content: center;
+    }
+
 
     .profile-wrapper {
         width: 280px;
         height: 340px;
     }
 
+
     .profile-card {
         width: 250px;
         height: 315px;
     }
 
-    .decoration-one {
-        width: 100px;
-        height: 100px;
-    }
-
-    .decoration-two {
-        width: 65px;
-        height: 65px;
-    }
 }
 
-/* ============================= */
+
 /* SMALL MOBILE */
-/* ============================= */
 
 @media (max-width: 500px) {
+
+    .hero h1 {
+        font-size: 2rem;
+        letter-spacing: -1px;
+    }
+
+
+    .hero h2 {
+        font-size: 1.05rem;
+    }
+
 
     .profile-wrapper {
         width: 240px;
         height: 300px;
     }
 
+
     .profile-card {
         width: 215px;
         height: 275px;
     }
 
-    .decoration-one {
-        width: 80px;
-        height: 80px;
-    }
-
-    .decoration-two {
-        width: 55px;
-        height: 55px;
-    }
 }

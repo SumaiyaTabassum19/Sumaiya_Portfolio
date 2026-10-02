@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+
 import {
     FiArrowRight,
     FiDownload,
@@ -8,56 +9,83 @@ import {
 
 import "./Hero.css";
 
-function Hero() {
-    return (
-        <section id="home" className="hero">
 
-            {/* Background Effects */}
+function Hero() {
+
+    return (
+        <section
+            id="home"
+            className="hero"
+        >
+
             <div className="hero-background">
+
                 <div className="gradient-circle circle-one"></div>
+
                 <div className="gradient-circle circle-two"></div>
+
             </div>
+
 
             <div className="container hero-container">
 
-                {/* LEFT SIDE */}
+                {/* CONTENT */}
+
                 <motion.div
                     className="hero-content"
-                    initial={{ opacity: 0, x: -40 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.7 }}
+
+                    initial={{
+                        opacity: 0,
+                        x: -40
+                    }}
+
+                    animate={{
+                        opacity: 1,
+                        x: 0
+                    }}
+
+                    transition={{
+                        duration: 0.7
+                    }}
                 >
 
                     <p className="hero-greeting">
                         Hello, I'm
                     </p>
 
+
                     <h1>
-                        <span>Sumaiya Tabassom</span>{" "}
+                        Sumaiya Tabassom{" "}
                         <span className="gradient-text">
                             Sanzida
                         </span>
                     </h1>
 
+
                     <h2>
-                        Full Stack Developer
+                        Computer Science Graduate &{" "}
+                        <span>
+                            Full Stack Developer
+                        </span>
                     </h2>
 
+
                     <p className="hero-description">
-                        I build modern web applications and explore
-                        machine learning solutions with a passion for
-                        technology, research, and continuous learning.
+                        I develop full-stack web applications using modern technologies, turning ideas into responsive, functional, and user-friendly digital experiences.
+
                     </p>
+
 
                     <div className="hero-buttons">
 
                         <a
-                            href="#projects"
+                            href="/projects"
                             className="primary-button"
                         >
-                            View My Work
+                            View My Projects
                             <FiArrowRight />
                         </a>
+
 
                         <a
                             href="/resume.pdf"
@@ -70,6 +98,7 @@ function Hero() {
 
                     </div>
 
+
                     <div className="hero-socials">
 
                         <a
@@ -80,6 +109,7 @@ function Hero() {
                         >
                             <FiGithub />
                         </a>
+
 
                         <a
                             href="https://www.linkedin.com/in/sumaiya-tabassom-sanzida-332ab0269/"
@@ -95,39 +125,57 @@ function Hero() {
                 </motion.div>
 
 
-                {/* RIGHT SIDE - PROFILE IMAGE */}
+                {/* PROFILE */}
+
                 <motion.div
-    className="hero-image"
-    initial={{ opacity: 0, x: 40 }}
-    animate={{ opacity: 1, x: 0 }}
-    transition={{ duration: 0.8, delay: 0.2 }}
->
-    <div className="profile-wrapper">
+                    className="hero-image"
 
-        <div className="profile-decoration decoration-one"></div>
-        <div className="profile-decoration decoration-two"></div>
+                    initial={{
+                        opacity: 0,
+                        x: 40
+                    }}
 
-        <div className="profile-card">
+                    animate={{
+                        opacity: 1,
+                        x: 0
+                    }}
 
-            <div className="profile-border">
+                    transition={{
+                        duration: 0.8,
+                        delay: 0.2
+                    }}
+                >
 
-                <img
-                    src="/profile.jpg"
-                    alt="Sumaiya Tabassom Sanzida"
-                    className="profile-photo"
-                />
+                    <div className="profile-wrapper">
 
-            </div>
+                        <div className="profile-decoration decoration-one"></div>
 
-        </div>
+                        <div className="profile-decoration decoration-two"></div>
 
-    </div>
-</motion.div>
+
+                        <div className="profile-card">
+
+                            <div className="profile-border">
+
+                                <img
+                                    src="/profile.jpg"
+                                    alt="Sumaiya Tabassom Sanzida"
+                                    className="profile-photo"
+                                />
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </motion.div>
 
             </div>
 
         </section>
     );
 }
+
 
 export default Hero;

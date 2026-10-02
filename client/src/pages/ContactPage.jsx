@@ -1,7 +1,15 @@
 import { useState } from "react";
-import { FiMail, FiMapPin, FiPhone, FiSend } from "react-icons/fi";
 
-import { sendContactMessage } from "../services/contactService";
+import {
+    FiMail,
+    FiMapPin,
+    FiPhone,
+    FiSend
+} from "react-icons/fi";
+
+import {
+    sendContactMessage
+} from "../services/contactService";
 
 import "./ContactPage.css";
 
@@ -15,21 +23,22 @@ function ContactPage() {
         message: ""
     });
 
+
     const [status, setStatus] = useState({
         type: "",
         message: ""
     });
 
+
     const [loading, setLoading] = useState(false);
 
 
-    // ===============================
-    // HANDLE INPUT
-    // ===============================
-
     const handleChange = (e) => {
 
-        const { name, value } = e.target;
+        const {
+            name,
+            value
+        } = e.target;
 
         setFormData({
             ...formData,
@@ -38,10 +47,6 @@ function ContactPage() {
 
     };
 
-
-    // ===============================
-    // SUBMIT FORM
-    // ===============================
 
     const handleSubmit = async (e) => {
 
@@ -54,14 +59,18 @@ function ContactPage() {
 
         setLoading(true);
 
+
         try {
 
-            const response = await sendContactMessage(formData);
+            const response =
+                await sendContactMessage(formData);
+
 
             setStatus({
                 type: "success",
                 message: response.message
             });
+
 
             setFormData({
                 name: "",
@@ -93,12 +102,9 @@ function ContactPage() {
 
 
     return (
-
         <main className="section contact-page">
 
             <div className="container">
-
-                {/* PAGE TITLE */}
 
                 <div className="section-title">
 
@@ -120,9 +126,6 @@ function ContactPage() {
 
                 <div className="contact-grid">
 
-
-                    {/* CONTACT INFORMATION */}
-
                     <div className="contact-info">
 
                         <h2>
@@ -138,7 +141,6 @@ function ContactPage() {
 
                         <div className="contact-info-list">
 
-
                             <div className="contact-info-item">
 
                                 <div className="contact-icon">
@@ -147,7 +149,10 @@ function ContactPage() {
 
                                 <div>
                                     <span>Email</span>
-                                    <a href="mailto:tabassumsts556@gmail.com">
+
+                                    <a
+                                        href="mailto:tabassumsts556@gmail.com"
+                                    >
                                         tabassumsts556@gmail.com
                                     </a>
                                 </div>
@@ -163,6 +168,7 @@ function ContactPage() {
 
                                 <div>
                                     <span>Phone</span>
+
                                     <p>
                                         +880 16144 15541
                                     </p>
@@ -179,6 +185,7 @@ function ContactPage() {
 
                                 <div>
                                     <span>Location</span>
+
                                     <p>
                                         Chattogram, Bangladesh
                                     </p>
@@ -190,8 +197,6 @@ function ContactPage() {
 
                     </div>
 
-
-                    {/* CONTACT FORM */}
 
                     <form
                         className="contact-form"
@@ -277,16 +282,12 @@ function ContactPage() {
                         </div>
 
 
-                        {/* STATUS MESSAGE */}
-
                         {status.message && (
-
                             <div
                                 className={`form-status ${status.type}`}
                             >
                                 {status.message}
                             </div>
-
                         )}
 
 
@@ -314,9 +315,7 @@ function ContactPage() {
             </div>
 
         </main>
-
     );
-
 }
 
 

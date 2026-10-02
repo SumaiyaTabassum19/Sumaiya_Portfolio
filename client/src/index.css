@@ -1,24 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 
-/* =========================================
+/* =====================================================
    COLOR PALETTE
-   #972828 - Deep Red
-   #E45742 - Coral Red
-   #EB7F31 - Orange
-   #FCAD38 - Golden Orange
-========================================= */
+===================================================== */
 
 :root {
-
     --accent-primary: #972828;
     --accent-secondary: #E45742;
     --accent-orange: #EB7F31;
     --accent-gold: #FCAD38;
 
-
-    /* LIGHT THEME */
-
+    /* Light Theme */
     --bg-primary: #fffaf7;
     --bg-secondary: #fff1e8;
     --bg-card: #ffffff;
@@ -30,9 +23,7 @@
 
     --navbar-bg: rgba(255, 250, 247, 0.95);
 
-
-    /* SHADOWS */
-
+    /* Shadows */
     --shadow-sm:
         0 4px 15px rgba(151, 40, 40, 0.08);
 
@@ -42,25 +33,19 @@
     --shadow-lg:
         0 15px 40px rgba(151, 40, 40, 0.16);
 
-
-    /* TRANSITION */
-
-    --transition:
-        all 0.3s ease;
+    --transition: all 0.3s ease;
 }
 
 
-/* =========================================
+/* =====================================================
    DARK THEME
-========================================= */
+===================================================== */
 
 [data-theme="dark"] {
-
     --accent-primary: #E45742;
     --accent-secondary: #FCAD38;
     --accent-orange: #EB7F31;
     --accent-gold: #FCAD38;
-
 
     --bg-primary: #211719;
     --bg-secondary: #321d1d;
@@ -69,27 +54,24 @@
     --text-primary: #fff5ef;
     --text-secondary: #d8c1bb;
 
-    --border-color:
-        rgba(228, 87, 66, 0.25);
+    --border-color: rgba(228, 87, 66, 0.25);
 
-    --navbar-bg:
-        rgba(33, 23, 25, 0.96);
-
+    --navbar-bg: rgba(33, 23, 25, 0.96);
 
     --shadow-sm:
         0 4px 15px rgba(0, 0, 0, 0.25);
 
     --shadow-md:
-        0 8px 25px rgba(0, 0, 0, 0.3);
+        0 8px 25px rgba(0, 0, 0, 0.30);
 
     --shadow-lg:
-        0 15px 40px rgba(0, 0, 0, 0.4);
+        0 15px 40px rgba(0, 0, 0, 0.40);
 }
 
 
-/* =========================================
+/* =====================================================
    RESET
-========================================= */
+===================================================== */
 
 * {
     margin: 0;
@@ -104,112 +86,87 @@ html {
 
 
 body {
+    min-width: 320px;
 
-    font-family:
-        "Inter",
-        sans-serif;
+    font-family: "Inter", sans-serif;
 
-    background:
-        var(--bg-primary);
+    line-height: 1.6;
 
-    color:
-        var(--text-primary);
+    background: var(--bg-primary);
+
+    color: var(--text-primary);
 
     transition:
         background-color 0.3s ease,
         color 0.3s ease;
-
-    min-width: 320px;
-
-    line-height: 1.6;
 }
 
-
-/* =========================================
-   LINKS
-========================================= */
 
 a {
-
-    text-decoration: none;
-
     color: inherit;
+    text-decoration: none;
 }
 
 
-/* =========================================
-   BUTTONS
-========================================= */
-
-button {
-
+button,
+input,
+textarea {
     font-family: inherit;
 }
 
 
-/* =========================================
-   IMAGES
-========================================= */
+button {
+    cursor: pointer;
+}
+
 
 img {
-
-    max-width: 100%;
-
     display: block;
+    max-width: 100%;
 }
 
 
-/* =========================================
+/* =====================================================
    CONTAINER
-========================================= */
+===================================================== */
 
 .container {
-
-    width:
-        min(1150px, 92%);
-
-    margin:
-        0 auto;
+    width: min(1150px, 92%);
+    margin: 0 auto;
 }
 
 
-/* =========================================
-   SECTION
-========================================= */
+/* =====================================================
+   COMMON SECTION
+===================================================== */
 
 .section {
-
     min-height: 100vh;
 
-    padding:
-        110px 0 80px;
+    padding: 110px 0 80px;
 
-    background:
-        var(--bg-primary);
+    background: var(--bg-primary);
 
-    transition:
-        background-color 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 
-/* =========================================
+/* =====================================================
    SECTION TITLE
-========================================= */
+===================================================== */
 
 .section-title {
-
     text-align: center;
-
     margin-bottom: 55px;
 }
 
 
 .section-label {
-
     display: inline-block;
 
-    color:
-        var(--accent-primary);
+    margin-bottom: 12px;
+
+    color: var(--accent-primary);
 
     font-size: 0.8rem;
 
@@ -218,195 +175,80 @@ img {
     letter-spacing: 2px;
 
     text-transform: uppercase;
-
-    margin-bottom: 12px;
 }
 
 
+.section-title h1,
 .section-title h2 {
+    margin-bottom: 15px;
 
-    font-size:
-        clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(2rem, 5vw, 3.5rem);
 
     line-height: 1.1;
-
-    margin-bottom: 15px;
 }
 
 
 .section-title p {
-
     max-width: 600px;
 
-    margin:
-        0 auto;
+    margin: 0 auto;
 
-    color:
-        var(--text-secondary);
+    color: var(--text-secondary);
 
-    line-height: 1.7;
+    font-size: 0.95rem;
 }
 
 
-/* =========================================
+/* =====================================================
    GRADIENT TEXT
-========================================= */
+===================================================== */
 
 .gradient-text {
-
     background:
         linear-gradient(
-            135deg,
+            90deg,
             var(--accent-primary),
             var(--accent-orange),
             var(--accent-gold)
         );
 
+    background-clip: text;
     -webkit-background-clip: text;
 
     -webkit-text-fill-color: transparent;
-
-    background-clip: text;
 }
 
 
-/* =========================================
-   GRADIENT BUTTON
-========================================= */
-
-.gradient-button {
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--accent-primary),
-            var(--accent-secondary),
-            var(--accent-orange)
-        );
-
-    color: #ffffff;
-
-    border: none;
-}
-
-
-/* =========================================
-   CARD
-========================================= */
-
-.card {
-
-    background:
-        var(--bg-card);
-
-    border:
-        1px solid var(--border-color);
-
-    border-radius:
-        16px;
-
-    box-shadow:
-        var(--shadow-sm);
-
-    transition:
-        var(--transition);
-}
-
-
-.card:hover {
-
-    transform:
-        translateY(-5px);
-
-    box-shadow:
-        var(--shadow-md);
-
-    border-color:
-        var(--accent-secondary);
-}
-
-
-/* =========================================
-   SCROLLBAR
-========================================= */
-
-::-webkit-scrollbar {
-
-    width: 8px;
-}
-
-
-::-webkit-scrollbar-track {
-
-    background:
-        var(--bg-secondary);
-}
-
-
-::-webkit-scrollbar-thumb {
-
-    background:
-        linear-gradient(
-            var(--accent-primary),
-            var(--accent-orange)
-        );
-
-    border-radius:
-        10px;
-}
-
-
-::-webkit-scrollbar-thumb:hover {
-
-    background:
-        var(--accent-secondary);
-}
-
-
-/* =========================================
-   TEXT SELECTION
-========================================= */
+/* =====================================================
+   SELECTION
+===================================================== */
 
 ::selection {
-
-    background:
-        var(--accent-primary);
-
-    color:
-        #ffffff;
+    background: var(--accent-primary);
+    color: #ffffff;
 }
 
 
-/* =========================================
+/* =====================================================
    FOCUS
-========================================= */
+===================================================== */
 
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-
-    outline:
-        2px solid var(--accent-orange);
-
-    outline-offset:
-        3px;
+    outline: 2px solid var(--accent-orange);
+    outline-offset: 3px;
 }
 
 
-/* =========================================
+/* =====================================================
    RESPONSIVE
-========================================= */
+===================================================== */
 
 @media (max-width: 768px) {
-
     .section {
-
-        padding-top:
-            95px;
-
-        padding-bottom:
-            60px;
+        padding-top: 95px;
+        padding-bottom: 60px;
     }
 }
-

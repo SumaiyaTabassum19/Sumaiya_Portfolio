@@ -1,35 +1,40 @@
-const API_URL = "http://localhost:5000/api/contacts";
+const API_URL =
+    "http://localhost:5000/api/contacts";
 
 
-// ===============================
-// SEND CONTACT MESSAGE
-// ===============================
+export const sendContactMessage =
+    async (contactData) => {
 
-export const sendContactMessage = async (contactData) => {
+        const response = await fetch(
+            API_URL,
+            {
+                method: "POST",
 
-    const response = await fetch(API_URL, {
-        method: "POST",
+                headers: {
+                    "Content-Type":
+                        "application/json"
+                },
 
-        headers: {
-            "Content-Type": "application/json"
-        },
-
-        body: JSON.stringify(contactData)
-    });
-
-
-    const data = await response.json();
-
-
-    if (!response.ok) {
-
-        throw new Error(
-            data.message ||
-            "Failed to send message."
+                body: JSON.stringify(
+                    contactData
+                )
+            }
         );
 
-    }
+
+        const data =
+            await response.json();
 
 
-    return data;
-};
+        if (!response.ok) {
+
+            throw new Error(
+                data.message ||
+                "Failed to send message."
+            );
+
+        }
+
+
+        return data;
+    };

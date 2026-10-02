@@ -7,6 +7,7 @@ import {
 
 import "./Education.css";
 
+
 function Education() {
 
     const education = [
@@ -16,7 +17,8 @@ function Education() {
                 "BSc in Computer Science & Engineering",
             institution:
                 "International Islamic University Chittagong",
-            period: "2020 – 2025",
+            period:
+                "2020 – 2025",
             description:
                 "Studied computer science fundamentals, software development, databases, networking, algorithms, and machine learning."
         },
@@ -26,7 +28,8 @@ function Education() {
                 "Higher Secondary Certificate",
             institution:
                 "Girls College Chattogram",
-            period: "2018 – 2019",
+            period:
+                "2018 – 2019",
             description:
                 "Higher secondary education with a science background."
         },
@@ -36,11 +39,13 @@ function Education() {
                 "Dakhil – Science",
             institution:
                 "Baitush Sharaf Adarsha Kamil Madrasah",
-            period: "2016 – 2017",
+            period:
+                "2016 – 2017",
             description:
                 "Secondary-level education with a science background."
         }
     ];
+
 
     return (
         <section
@@ -73,51 +78,62 @@ function Education() {
 
                 <div className="education-grid">
 
-                    {education.map((item, index) => (
+                    {education.map(
+                        (item, index) => (
 
-                        <motion.article
-                            className="education-card"
-                            key={item.degree}
-                            initial={{
-                                opacity: 0,
-                                y: 25
-                            }}
-                            whileInView={{
-                                opacity: 1,
-                                y: 0
-                            }}
-                            viewport={{
-                                once: true
-                            }}
-                            transition={{
-                                duration: 0.5,
-                                delay: index * 0.1
-                            }}
-                        >
+                            <motion.article
+                                className="education-card"
+                                key={item.degree}
 
-                            <div className="education-icon">
-                                {item.icon}
-                            </div>
+                                initial={{
+                                    opacity: 0,
+                                    y: 25
+                                }}
 
-                            <span className="education-period">
-                                {item.period}
-                            </span>
+                                whileInView={{
+                                    opacity: 1,
+                                    y: 0
+                                }}
 
-                            <h3>
-                                {item.degree}
-                            </h3>
+                                viewport={{
+                                    once: true
+                                }}
 
-                            <h4>
-                                {item.institution}
-                            </h4>
+                                transition={{
+                                    duration: 0.5,
+                                    delay:
+                                        index * 0.1
+                                }}
+                            >
 
-                            <p>
-                                {item.description}
-                            </p>
+                                <div className="education-icon">
+                                    {item.icon}
+                                </div>
 
-                        </motion.article>
 
-                    ))}
+                                <span className="education-period">
+                                    {item.period}
+                                </span>
+
+
+                                <h3>
+                                    {item.degree}
+                                </h3>
+
+
+                                <h4>
+                                    {item.institution}
+                                </h4>
+
+
+                                <p>
+                                    {item.description}
+                                </p>
+
+                            </motion.article>
+
+                        )
+                    )}
 
                 </div>
 
@@ -126,5 +142,6 @@ function Education() {
         </section>
     );
 }
+
 
 export default Education;
